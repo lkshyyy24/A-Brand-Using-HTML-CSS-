@@ -1,0 +1,333 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 252, 224);
+  flex-direction: column; /* So header & hero stack vertically */
+  margin: 0; /* Remove default body margin */
+}
+
+/* Header container */
+.container {
+  display: flex; /* Brand + nav + search side by side */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align vertically */
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+  padding: 10px 20px;
+}
+
+/* Brand name */
+.container h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  gap: 15px; /* Space between links */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  border-bottom: 1px solid black;
+  color: rgb(246, 50, 50);
+}
+
+/* Search bar */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+input {
+  height: 35px;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  transition: 0.6s;
+  margin: 10px;
+  color: white;
+  padding: 0 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) 10%,
+    rgb(255, 236, 161) 90%
+  );
+}
+
+input:hover {
+  border-radius: 5px;
+  width: 150px;
+}
+
+button {
+  height: 40px;
+  width: 50px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: 0.6s;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+button:hover {
+  border-radius: 10px;
+  width: 80px;
+  background: linear-gradient(90deg, black, grey);
+  color: white;
+}
+
+
+/* Section Layout */
+section {
+  display: flex;
+  justify-content: flex-start;   /* Sidebar left, content right */
+  align-items: flex-start;       /* Align items to the top */
+  background-color: rgb(255, 252, 224);
+  margin-top: 25px;
+  min-height: 1000px;            /* Better than fixed height */
+  gap: 20px;  
+  border-top: 1px solid gold;                   /* Space between sidebar and content */
+}
+
+/* Sidebar */
+aside {
+  width: 200px;
+}
+
+.side-hero {
+  display: flex;
+  flex-direction: column;        /* Stack filters vertically */
+  padding: 15px;
+  background-color: rgb(255, 252, 224);
+  margin-left: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+  accent-color: gold;
+  font-size: larger;
+}
+
+aside h3 {
+  font-weight: bold;
+  
+  margin-bottom: 10px;
+}
+
+/* Main Content */
+.hero {
+  display: flex;
+  flex-wrap: wrap;               /* Boxes wrap onto new lines */
+  gap: 15px;                     /* Space between boxes */
+  flex: 1;                       /* Take remaining width */
+  background-color:rgb(255, 252, 224);
+  padding: 15px;
+
+  margin-top: 30px;
+  margin-left: 30px;
+  border-left: 0.6px solid black;
+
+}
+
+/* Product Boxes */
+.boxes {
+  height: 280px;
+  width: 280px;
+  margin: 5px;
+  background-color: rgb(165, 165, 165);
+   background-image: url("blue-striped-high-top-sneaker-comic-book-art-masterpiece-white-high-shoe-blue-one-depicted-comic-book-style-301345727.webp");
+   background-size: cover;
+   transition: 1s;
+   border-radius: 10px;
+   border: 0.5px solid black;
+}
+.boxes:hover{   
+    height: 270px;
+    width: 270px;
+    box-shadow: 2px 1px 8px black;
+    background-image: url("download\ \(6\).jpeg\ beige.jpeg");
+}
+.side-hero input[type="checkbox"]{
+    height: 15px;
+    width: 15px;
+    align-items: center;
+}
+aside{
+    border-bottom: 1px solid black;
+}
+input[type="range"] {
+  width: 160px;
+  height: 5px;
+  accent-color: goldenrod; /* Slider thumb & track color */
+  cursor: pointer;
+  
+}
+label h3{
+    
+    margin-left: 20PX;
+}
+h3 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+  }
+
+.range-section {
+  padding: 15px 0;
+  border-bottom: 2px solid #ccc; /* Section divider */
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+#priceRange {
+  appearance: none;
+  width: 100%;
+  height: 1px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #000000, #000000);
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Track (Firefox) */
+#priceRange::-moz-range-track {
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #987f00, #fef722);
+}
+
+/* Thumb (Firefox) */
+#priceRange::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#priceRange::-moz-range-thumb:hover {
+  background: #4CAF50;
+  border: 2px solid #2e7d32;
+}
+
+/* Hover effect on track */
+#priceRange:hover {
+  background: #bbb206;
+}
+
+/* Value display */
+#rangeValue {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #333;
+  align-items: center;
+}
+.size-chart {
+  padding: 15px 0;
+  border-bottom: 2px solid #ccc; /* section divider */
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.size-chart h3 {
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.size-chart label {
+  display: block;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.size-chart input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  accent-color: #d4af37; /* simple golden color when checked */
+  margin-right: 6px;
+}
+.loading{
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.load{
+  
+  height: 20px;
+  width: 100%;
+background-color: black;
+animation: loading 3s infinite ease-in-out;
+
+
+}
+@keyframes loading{
+  0%{
+    transform: translateX(-1000px);
+    background-color: #000000;
+  }
+  50%{
+    background-color: rgb(212, 212, 212);
+  }
+  75%{
+    background-color: grey;
+  }
+  100%{
+    transform: translateX(100px);
+    background-color: black;
+  }
+}
+body {
+  margin: 0;   /* removes default body margin */
+  padding: 0;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;   /* 100% of the viewport width */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  
+  box-sizing: border-box;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  font-size: larger;
+  transition: 0.3s ease;  /* smoother + faster */
+}
+
+.footer ul li a:hover {
+  color: #d4af37;  /* gold color */
+  transform: translateX(5px); /* subtle slide effect */
+}
+
+.footer ul h4 {
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: #222;
+}
